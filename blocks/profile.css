@@ -96,7 +96,7 @@ margin: 0;
 @media screen and (max-width:770px) {
 
     .profile__info {
-     grid-template-columns: minmax(auto, 267px)
+     grid-template-columns: minmax(auto, 267px);
     }
  
      .profile__name {
@@ -132,11 +132,6 @@ margin: 0;
         padding-bottom: 36px;
     }
 
-    .profile__description {
-        width: 100%;
-        text-align: center;
-    }
-
     .profile__name {
         font-family: 'Inter' Arial, sans-serif;
         font-size: 22px;
@@ -154,6 +149,7 @@ margin: 0;
         line-height: 1.2;
         letter-spacing: 0em;
         text-align: center;
+        width: 100%;
     }
     
     .profile__edit-button {
@@ -167,6 +163,4 @@ margin: 0;
         height: 50px;
         width: 282px;
     }
-
-   
 }
