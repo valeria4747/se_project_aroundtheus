@@ -4,58 +4,16 @@
     line-height: 29px;
     letter-spacing: 0em;
     text-align: left;
-    margin-top: 30px;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-   
+    padding-top: 51px;
+    margin: 0 auto;
 }
 
 .cards__list {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, 282px);
-    grid-gap: 20px 17px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-}
-
-.card__image {
-width: 282px;
-height: 282px;
-border-radius: 10px;
-}
-
-.card__description {
-    display: flex;
-    background-color: white;
-    color: black;
-    padding: 25px 20px;
-    align-items: center;
-    border-bottom-right-radius:  10px;
-    border-bottom-left-radius:10px;
-    font-family: Inter, Arial, sans-serif;
-    justify-content: space-between;
-    max-height: 29px;
-}
-
-.card__description-text {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.card__like-button {
-    background: transparent url(/images/like-button.jpg) center no-repeat;
-    width: 21px;
-    height: 18px;
-    border: transparent;
-}
-
-.card__like-button:hover {
-    opacity: 60%;
+    display: grid; 
+    justify-content: center; 
+    grid-template-columns: repeat(auto-fit, 282px); 
+    grid-gap: 20px 17px; 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
 }

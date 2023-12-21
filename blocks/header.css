@@ -1,5 +1,6 @@
 .header {
     margin: 45px auto 0;
+    border-bottom: rgb(84 84 84 / .7);
 }
 
 .header__logo {
