@@ -4,7 +4,7 @@
     line-height: 29px;
     letter-spacing: 0em;
     text-align: left;
-    padding-top: 51px;
+    padding-top: 40px;
     margin: 0 auto;
 }
 
@@ -16,4 +16,10 @@
     list-style-type: none; 
     margin: 0; 
     padding: 0; 
+}
+
+@media screen and (max-width:620px) {
+    .cards {
+        padding: 0;
+    }
 }

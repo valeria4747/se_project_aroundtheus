@@ -1,6 +1,6 @@
 .profile {
     display: flex;
-    padding-top: 40px;
+    padding-top: 51px;
     align-items: center;
 }
 
@@ -16,16 +16,17 @@
 }
 
 .profile__name {
-    font-size: 42px;
-    line-height: 1.1;
-    font-family: 'Inter', Arial, sans-serif;
-    font-weight: 500;
-    text-overflow: ellipsis;
+font-size: 42px;
+line-height: 1.1;
+font-family: 'Inter', Arial, sans-serif;
+font-weight: 500;
+text-overflow: ellipsis;
 white-space: nowrap;
 overflow: hidden;
-max-width: 375px;
-    
-    
+max-width: 100%;
+grid-area: title;
+padding-bottom: 7px;
+margin: 0;  
 }
 
 .profile__description {
@@ -39,10 +40,13 @@ text-overflow: ellipsis;
 white-space: nowrap;
 overflow: hidden;
 max-width: 375px;
+grid-area: description;
+margin: 0;
+
 }
 
 .profile__edit-button {
-    background: transparent url(../images/Edit\ Button.png) center no-repeat;
+    background: transparent url(../images/Edit-button.svg) center no-repeat;
     width: 24px;
     height: 24px;
     grid-area: button;
@@ -55,10 +59,11 @@ max-width: 375px;
 
 .profile__edit-button:hover {
     opacity: 60%;
+    cursor: pointer;
 }
 
 .profile__add-button {
-    background: transparent url(../images/Vector.png) center no-repeat;
+    background: transparent url(../images/Add-button.svg) center no-repeat;
     width: 150px;
     height: 50px;
     margin-left: auto;
@@ -70,28 +75,8 @@ max-width: 375px;
 
 .profile__add-button:hover {
     opacity: 60%;
-}
-
-.profile__title {
-font-family: Inter, Arial, sans-serif;
-font-size: 42px;
-font-weight: 500;
-line-height: 48px;
-letter-spacing: 0em;
-text-align: left;
-grid-area: title;
-margin: 0;
-}
-
-.profile__description {
-font-family: Inter, Arial, sans-serif;
-font-size: 18px;
-font-weight: 400;
-line-height: 22px;
-letter-spacing: 0em;
-text-align: left;
-grid-area: description;
-margin: 0;
+    cursor: pointer;
+    
 }
 
 .profile__image {
@@ -111,9 +96,7 @@ margin: 0;
  
      .profile__name {
          font-size: 30px;
-         font-weight: 500;
          line-height: 1.2;
-         letter-spacing: 0em;
          text-align: center;
      }
 
@@ -131,12 +114,13 @@ margin: 0;
         display: flex;
     flex-direction: column;
     align-items: center; 
-    
+    padding: 42px 0 36px;
     }
 
     .profile__image {
         margin: 0;
         padding-bottom: 26px;
+        
     }
 
     .profile__info {
@@ -144,23 +128,19 @@ margin: 0;
         flex-wrap: wrap;
         width: 100%;
         justify-content: center;
-        padding-bottom: 36px;
+        
     }
 
     .profile__name {
         font-family: 'Inter' Arial, sans-serif;
         font-size: 22px;
-        font-weight: 500;
-        line-height: 1.2;
-        letter-spacing: 0em;
-         text-align: center;
          margin: 0;
          padding-bottom: 14px;
 
     }
 
-    .profile__description {
-        font-family: 'Inter', Arial, sans-serif;
+     .profile__description {
+    
         font-size: 14px;
         font-weight: 400;
         line-height: 1.2;
@@ -168,12 +148,14 @@ margin: 0;
         text-align: center;
         width: 100%;
         margin: 0;
-        padding-bottom: 36px;
+        padding: 0 0 36px;
+    
     }
     
     .profile__edit-button {
         width: 18px;
         height: 18px;
+        margin-bottom: 14px;
     }
 
     .profile__add-button {

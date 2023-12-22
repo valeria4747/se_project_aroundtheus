@@ -18,7 +18,7 @@
         align-items: center;
         border-bottom-right-radius:  10px;
         border-bottom-left-radius:10px;
-        font-family: Inter, Arial, sans-serif;
+        font-family: 'Inter', Arial, sans-serif;
         justify-content: space-between;
         max-height: 29px;
 
@@ -33,7 +33,7 @@
     }
     
     .card__like-button {
-        background: transparent url(../images/like-button.jpg) center no-repeat;
+        background: transparent url(../images/like-button.svg) center no-repeat;
         width: 21px;
         height: 18px;
         border: transparent;
@@ -41,4 +41,5 @@
     
     .card__like-button:hover {
         opacity: 50%;
+        cursor: pointer;
     }

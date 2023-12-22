@@ -9,6 +9,7 @@
     color: #545454;
     font-size: 18px;
     line-height: 1.2;
+    margin-top: 0;
 }
 
 @media screen and (max-width:620px) {
