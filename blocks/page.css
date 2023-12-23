@@ -20,9 +20,7 @@
 @media screen and (max-width: 1280px) { 
     .page__content { 
      margin: 0 30px; 
-     max-width: calc (100% - 60px); 
     } 
-
  } 
 
  @media screen and (max-width: 580px) { 
