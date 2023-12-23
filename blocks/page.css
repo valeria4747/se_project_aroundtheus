@@ -17,18 +17,20 @@
     min-height: 100vh;
 }
 
-@media screen and (max-width: 1280px) {
-   
-    .page__content {
-     margin: 0 30px;
-     max-width: calc (100% - 60px);
-    }
- }
+@media screen and (max-width: 1280px) { 
 
- @media screen and (max-width: 320px) {
+    .page__content { 
+     margin: 0 30px; 
+     max-width: calc (100% - 60px); 
+    } 
 
-    .page__content {
-        margin: 0 10px;
-        max-width: calc (100% - 20px);
-       }
-    }
+ } 
+
+ @media screen and (max-width: 320px) { 
+
+    .page__content { 
+        margin: 0 10px; 
+        max-width: calc (100% - 20px); 
+       } 
+
+    } 

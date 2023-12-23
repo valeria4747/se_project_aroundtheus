@@ -1,5 +1,6 @@
 .footer {
     padding-top: 67px;
+    padding-bottom: 60px;
     color: #545454;
 }
 
@@ -9,16 +10,18 @@
     color: #545454;
     font-size: 18px;
     line-height: 1.2;
-    margin-top: 0;
+    margin: 0;
 }
 
 @media screen and (max-width:620px) {
 
     .footer {
-        padding-bottom: 48px;
+        padding-top: 48px;
+        padding-bottom: 36px;
     }
 
     .footer__copyright {
         font-size: 14px;
+        margin: 0;
 
 }
