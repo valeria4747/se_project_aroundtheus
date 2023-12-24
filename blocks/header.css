@@ -19,11 +19,8 @@
     .header__logo {
     margin-left: 27px;
     padding-bottom: 32px;
+    width: 126px;
+    height: 24px;
     }
-
-    .header__logo {
-        width: 126px;
-        height: 24px;
-        }
 }
 
