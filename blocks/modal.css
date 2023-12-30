@@ -1,0 +1,117 @@
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    padding: 0 19px;
+}
+
+.modal__container {
+    position: relative;
+    width: 430px;
+    height: 330px;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.modal__close {
+    position: absolute;
+    background-image: url(../images/Close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    bottom: calc(100% + 5px);
+    left: calc(100% + 5px);
+    padding: 0;
+}
+
+.modal__close:hover {
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.modal__heading {
+    font-family: "inter";
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 1.2;
+    padding: 34px 64px 54px 36px ;
+    margin: 0;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.modal__input {
+    font-family: 'inter';
+    font-weight: 400px;
+    font-size: 14px;
+    line-height: 1.1;
+    gap: 30px;
+    width: 358px;
+    height: 27px; 
+    margin: 0 auto;
+    border: 1px;
+    border-bottom-style: solid;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal__button {
+    font-family: 'inter';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.1;
+    width: 358px;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    margin: 18px auto 0;
+    padding: 0;
+}
+
+.modal__button:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:560px) {
+    .modal__close {
+        width: 26px;
+        height: 26px;
+        bottom: calc(100% + 20px);
+        left: calc(100% - 26px);
+    }
+
+    .modal__container {
+        height: 322px;
+    }
+
+    .modal__heading {
+        padding: 25px 22px 75px;
+        font-size: 18px;
+    }
+
+    .modal__input {
+        width: 238px;
+    }
+
+    .modal__button {
+        width: 238px;
+        height: 46px;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+}
