@@ -6,8 +6,17 @@
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    display: flex;
+   /* display: flex;*/
     padding: 0 19px;
+    display: none;
+}
+
+.modal__opened {
+    display: flex;
+}
+
+.modal__closed {
+    display: none;
 }
 
 .modal__container {
@@ -62,6 +71,7 @@
     width: 358px;
     height: 27px; 
     margin: 0 auto;
+    padding: 0;
     border: 1px;
     border-bottom-style: solid;
     border-color: rgba(0, 0, 0, 0.2);
@@ -100,8 +110,10 @@
     }
 
     .modal__heading {
-        padding: 25px 22px 75px;
+        padding: 25px 0 75px;
         font-size: 18px;
+        width: 238px;
+        margin: 0 auto;
     }
 
     .modal__input {
