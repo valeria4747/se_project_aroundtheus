@@ -29,14 +29,48 @@ console.log(initialCards);
 
 const profileEditButton = document.querySelector ('#profile-edit-button');
 const profileEditModal = document.querySelector ('#profile-edit-modal');
-
-profileEditButton.addEventListener ('click', () => {
-    profileEditModal.classList.add('modal__opened');
-});
-
 const modalCloseButton = document.querySelector ('#modal-close-button');
+const profileName = document.querySelector ('.profile__name');
+const profileDescription = document.querySelector ('.profile__description');
+const profileNameInput = document.querySelector ('#profile-name-input');
+const profileDescriptionInput = document.querySelector ('#profile-description-input');
+const profileEditForm = profileEditModal.querySelector ('.modal__form');
+const cardTemplate = document.querySelector ('#card-template').content.firstElementChild;
+const cardListEl = document.querySelector ('.card__list');
+
+function closePopop () {
+    profileEditModal.classList.remove('modal__opened');
+}
+
+profileEditButton.addEventListener('click', () => {
+ profileNameInput.value = profileNameInput.textContent;  
+ profileDescriptionInput.value = profileDescriptionInput.textContent;  
+ profileEditModal.classList.add('modal__opened');
+});
 
 modalCloseButton.addEventListener ('click', () => {
-    profileEditModal.classList.add('modal__closed');
+    closePopop ()
 });
+
+profileEditForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    profileName.textContent = profileNameInput.value;
+    profileDescription.textContent = profileDescriptionInput.value;
+    closePopop ()
+});
+
+initialCards.forEach (Data) => {
+    const cardElement = getCardElement (Data);
+cardListEl.append(cardElement);
+});
+
+function getCardElement (Data) {
+    const cardElement = cardTemplate.cloneNode(true);
+    const cardImageEl = cardElement.querySelector ('.card__image');
+    const cardTextEl = cardElement.querySelector ('.card__text');
+    cardTextEl.textContent = Data.name;
+    return cardElement;
+}
+
+
 

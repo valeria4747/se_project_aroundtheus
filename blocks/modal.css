@@ -6,17 +6,12 @@
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-   /* display: flex;*/
     padding: 0 19px;
     display: none;
 }
 
 .modal__opened {
     display: flex;
-}
-
-.modal__closed {
-    display: none;
 }
 
 .modal__container {
@@ -48,7 +43,7 @@
 }
 
 .modal__heading {
-    font-family: "inter";
+    font-family: "inter", Arial, sans-serif;
     font-weight: 900;
     font-size: 24px;
     line-height: 1.2;
@@ -63,7 +58,7 @@
 }
 
 .modal__input {
-    font-family: 'inter';
+    font-family: 'inter', Arial, sans-serif;
     font-weight: 400px;
     font-size: 14px;
     line-height: 1.1;
@@ -78,7 +73,7 @@
 }
 
 .modal__button {
-    font-family: 'inter';
+    font-family: 'inter', Arial, sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.1;
