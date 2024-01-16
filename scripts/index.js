@@ -46,8 +46,8 @@ function closePopup() {
 }
 
 profileEditButton.addEventListener("click", () => {
-  profileNameInput.value = profileNameInput.textContent;
-  profileDescriptionInput.value = profileDescriptionInput.textContent;
+  profileNameInput.value = profileName.textContent;
+  profileDescriptionInput.value = profileDescription.textContent;
   profileEditModal.classList.add("modal_opened");
  });
 
@@ -57,8 +57,6 @@ profileEditForm.addEventListener("submit", (e) => {
   e.preventDefault();
   profileName.textContent = profileNameInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
-  profileNameInput.value = profileNameInput.textContent;
-  profileDescriptionInput.value = profileDescriptionInput.textContent;
   closePopup();
 });
 
