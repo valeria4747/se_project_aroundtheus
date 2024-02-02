@@ -49,14 +49,14 @@
 
 .card__trash-button {
   background: transparent url(../images/Trash.svg);
-border: none;
-cursor: pointer;
-width: 18px;
-height: 19px;
-position: absolute;
-margin: 18px 15px 0px 0px;
-place-self: end;
-padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 18px;
+  height: 19px;
+  position: absolute;
+  margin: 18px 15px 0px 0px;
+  place-self: end;
+  padding: 0;
 }
 
 .card__trash-button:hover {
@@ -75,4 +75,3 @@ padding: 0;
   padding: 0 19px;
   display: none;
 }
-

@@ -62,7 +62,7 @@ function handleEditProfileSubmit(e) {
   e.preventDefault();
   profileName.textContent = profileNameInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
-  closePopup();
+  closeModal();
 }
 
 function openModal(modal) {
@@ -121,23 +121,26 @@ function getCardElement(data) {
     });
   });
 
-
-  const previewImage = document.querySelector (".modal_preview-image");
-  const previewDescription = document.querySelector (".modal_preview-description");
-  const previewCloseButton = document.querySelector ("#modal-preview-close");
+  const previewImage = document.querySelector(".modal__preview-image");
+  const previewDescription = document.querySelector(
+    ".modal__preview-description"
+  );
+  const previewCloseButton = document.querySelector("#modal-preview-close");
   const previewContainer = document.querySelector("#modal-preview-container");
 
- cardImageEl.addEventListener("click",() => {
-  previewCardModal.classList.add("modal_opened");
-  previewImage.src = data.link;
-      previewDescription.textContent = data.name;
-      previewImage.alt = `${data.name}`;
-      previewCloseButton.style.visibility = "visible";
-      previewContainer.style.visibility = "visible";
-      closePopup();
+  cardImageEl.addEventListener("click", () => {
+    previewCardModal.classList.add("modal_opened");
+    previewImage.src = data.link;
+    previewDescription.textContent = data.name;
+    previewImage.alt = `${data.name}`;
+    previewCloseButton.style.visibility = "visible";
+    previewContainer.style.visibility = "visible";
   });
 
-  
+  previewCloseButton.addEventListener("click", () =>
+    closeModal(previewCardModal)
+  );
+
   cardTextEl.textContent = data.name;
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
