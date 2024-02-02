@@ -84,7 +84,7 @@ editSaveButton.addEventListener("click", () => closeModal(profileEditModal));
 addNewCardButton.addEventListener("click", () => openModal(addCardModal));
 addModalForm.addEventListener("submit", handleAddCardSubmit);
 addCardModalCloseButton.addEventListener("click", () =>
-  closeModal(addCardModal)
+  closeModal(addCardModal) 
 );
 saveCardButton.addEventListener("click", () => closeModal(addCardModal));
 
@@ -96,7 +96,9 @@ function handleAddCardSubmit(e) {
 
   const newCard = getCardElement(data);
   cardListEl.prepend(newCard);
+  e.target.reset();
 }
+
 
 initialCards.forEach((data) => {
   const cardElement = getCardElement(data);
