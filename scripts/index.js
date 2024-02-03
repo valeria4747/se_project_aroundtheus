@@ -29,9 +29,6 @@ console.log(initialCards);
 
 const profileEditButton = document.querySelector("#profile-edit-button");
 const profileEditModal = document.querySelector("#edit-modal");
-const profileModalCloseButton = document.querySelector(
-  "#profile-modal-close-button"
-);
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 const profileNameInput = document.querySelector("#profile-name-input");
@@ -45,19 +42,26 @@ const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 const cardListEl = document.querySelector(".cards__list");
 const addNewCardButton = document.querySelector(".profile__add-button");
-const addCardModalCloseButton = document.querySelector(
-  "#add-card-close-button"
-);
 const addCardModal = document.querySelector("#add-card-modal");
 const saveCardButton = document.querySelector("#save-add-card-button");
 const cardTitleInput = document.querySelector("#add-title-input");
 const cardLinkInput = document.querySelector("#add-image-input");
 const addModalForm = document.querySelector("#add-card-modal");
 const previewCardModal = document.querySelector("#modal-preview");
+const closeButtons = document.querySelectorAll(".modal__close")
+const previewImage = document.querySelector(".modal__preview-image");
+const previewDescription = document.querySelector(
+  ".modal__preview-description"
+);
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
 }
+
+function openModal(modal) {
+  modal.classList.add("modal_opened");
+}
+
 function handleEditProfileSubmit(e) {
   e.preventDefault();
   profileName.textContent = profileNameInput.value;
@@ -65,28 +69,21 @@ function handleEditProfileSubmit(e) {
   closeModal();
 }
 
-function openModal(modal) {
-  modal.classList.add("modal_opened");
-}
+closeButtons.forEach((button) => {
+  const modal = button.closest('.modal');
+  button.addEventListener('click', () => closeModal(modal));
+});
 
 profileEditButton.addEventListener("click", () => {
   profileNameInput.value = profileName.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-  profileEditModal.classList.add("modal_opened");
+  openModal(profileEditModal);
 });
 
-profileModalCloseButton.addEventListener("click", () =>
-  closeModal(profileEditModal)
-);
-profileEditForm.addEventListener("submit", handleEditProfileSubmit);
-editSaveButton.addEventListener("click", () => closeModal(profileEditModal));
-
+editSaveButton.addEventListener("submit", handleEditProfileSubmit);
 addNewCardButton.addEventListener("click", () => openModal(addCardModal));
 addModalForm.addEventListener("submit", handleAddCardSubmit);
-addCardModalCloseButton.addEventListener("click", () =>
-  closeModal(addCardModal) 
-);
-saveCardButton.addEventListener("click", () => closeModal(addCardModal));
+saveCardButton.addEventListener("submit", handleAddCardSubmit);
 
 function handleAddCardSubmit(e) {
   e.preventDefault();
@@ -119,29 +116,16 @@ function getCardElement(data) {
 
   trashButton.forEach((trashButton) => {
     trashButton.addEventListener("click", () => {
-      cardElement.remove("cardElement");
+      cardElement.remove(cardElement);
     });
   });
-
-  const previewImage = document.querySelector(".modal__preview-image");
-  const previewDescription = document.querySelector(
-    ".modal__preview-description"
-  );
-  const previewCloseButton = document.querySelector("#modal-preview-close");
-  const previewContainer = document.querySelector("#modal-preview-container");
 
   cardImageEl.addEventListener("click", () => {
     previewCardModal.classList.add("modal_opened");
     previewImage.src = data.link;
     previewDescription.textContent = data.name;
     previewImage.alt = `${data.name}`;
-    previewCloseButton.style.visibility = "visible";
-    previewContainer.style.visibility = "visible";
   });
-
-  previewCloseButton.addEventListener("click", () =>
-    closeModal(previewCardModal)
-  );
 
   cardTextEl.textContent = data.name;
   cardImageEl.src = data.link;
