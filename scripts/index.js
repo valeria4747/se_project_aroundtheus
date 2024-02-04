@@ -66,7 +66,7 @@ function handleEditProfileSubmit(e) {
   e.preventDefault();
   profileName.textContent = profileNameInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
-  closeModal();
+  closeModal(profileEditModal);
 }
 
 closeButtons.forEach((button) => {
@@ -80,6 +80,7 @@ profileEditButton.addEventListener("click", () => {
   openModal(profileEditModal);
 });
 
+profileEditForm.addEventListener("submit", handleEditProfileSubmit);
 editSaveButton.addEventListener("submit", handleEditProfileSubmit);
 addNewCardButton.addEventListener("click", () => openModal(addCardModal));
 addModalForm.addEventListener("submit", handleAddCardSubmit);
@@ -94,6 +95,7 @@ function handleAddCardSubmit(e) {
   const newCard = getCardElement(data);
   cardListEl.prepend(newCard);
   e.target.reset();
+  closeModal(addCardModal);
 }
 
 
